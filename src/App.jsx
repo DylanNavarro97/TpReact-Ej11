@@ -10,7 +10,7 @@ function App() {
   const [categoria, setCategoria] = useState("business");
   const [noticias, setNoticias] = useState([{}])
 
-  const EndpointURL = `https://newsdata.io/api/1/news?apikey=pub_379223663507d1fe03aad4aefa259cec88c00&category=${categoria}&language=en`;
+  const EndpointURL = `https://newsdata.io/api/1/news?apikey=pub_37926519c673e2145d5ad0ba29e95e4cc8c24&category=${categoria}&language=en`;
 
   const handleChange = (e) => {
     setCategoria(e.target.value);
@@ -20,7 +20,7 @@ function App() {
     try {
       const respuesta = await fetch(EndpointURL);
       const datos = await respuesta.json();
-      setNoticias(datos)
+      setNoticias(datos.results)
     } catch (error) {
       console.log(error);
     }
