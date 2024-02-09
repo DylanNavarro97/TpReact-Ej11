@@ -1,6 +1,10 @@
+import { Nav } from "react-bootstrap"
+
 const Titulo = () => {
   return (
-    <div>Titulo</div>
+    <Nav className="shadow p-4 d-flex justify-content-center">
+        <h1>Noticias</h1>
+    </Nav>
   )
 }
 
